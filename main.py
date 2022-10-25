@@ -12,6 +12,16 @@ from passlib.handlers.sha2_crypt import sha512_crypt as crypto
 from pydantic import BaseModel
 from rich import inspect, print
 from rich.console import Console
+'''
+docker-compose up -d --build
+http://localhost:8000/
+
+
+app = FastAPI()
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+'''
 
 console = Console()
 
