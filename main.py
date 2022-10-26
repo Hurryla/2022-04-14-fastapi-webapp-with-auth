@@ -21,6 +21,28 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+#router set
+http://192.168.0.1
+#find my fixed ip
+https://nordvpn.com/zh-tw/ip-lookup/
+
+http://192.168.0.131:8000/
+http://180.177.101.173:8000/
+
+#ginx
+http://localhost/
+http://127.0.0.1/
+http://127.0.0.1:80
+
+#no-ip
+http://hurryla-simenvi.ddns.net/
+http://hurryla-server.ddnsking.com/
+http://hurryla-simenvi.ddns.net:8000/
+http://hurryla-server.ddnsking.com:8000/
+
+User(username="user1@gmail.com", hashed_password=crypto.hash("12345"))   
+
 '''
 
 console = Console()

@@ -1,7 +1,23 @@
 version: '3.8'
 services:
   app:
+    container_name: api_app
     build: .
     command: uvicorn main:app --host 0.0.0.0
     ports:
-      - 8000:8000
+      - "8000:8000"
+
+  nginx:
+    image: nginx:latest
+    container_name: webserver
+    # build:
+      # context: .
+      # dockerfile: Dockerfile.nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/ssl/
+
